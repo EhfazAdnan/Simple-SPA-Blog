@@ -177,6 +177,7 @@
     <footer>
       <div class="container">
         <div class="row">
+
           <div class="span3">
             <div class="widget">
               <h5 class="widgetheading">Browse pages</h5>
@@ -189,6 +190,7 @@
               </ul>
             </div>
           </div>
+
           <div class="span3">
             <div class="widget">
               <h5 class="widgetheading">Important stuff</h5>
@@ -201,32 +203,34 @@
               </ul>
             </div>
           </div>
-          <div class="span3">
+
+         <div class="span3">
             <div class="widget">
               <h5 class="widgetheading">Flickr photostream</h5>
-              <div class="flickr_badge">
-                <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=8&amp;display=random&amp;size=s&amp;layout=x&amp;source=user&amp;user=34178660@N03"></script>
-              </div>
+              
               <div class="clear">
               </div>
             </div>
           </div>
+          
           <div class="span3">
             <div class="widget">
               <h5 class="widgetheading">Get in touch with us</h5>
               <address>
-								<strong>Flattern studio, Pte Ltd</strong><br>
-								 Springville center X264, Park Ave S.01<br>
-								 Semarang 16425 Indonesia
-					 		</address>
+				<strong>Flattern studio, Pte Ltd</strong><br>
+					Springville center X264, Park Ave S.01<br>
+					Semarang 16425 Indonesia
+				</address>
               <p>
                 <i class="icon-phone"></i> (123) 456-7890 - (123) 555-7891 <br>
                 <i class="icon-envelope-alt"></i> email@domainname.com
               </p>
             </div>
           </div>
+
         </div>
       </div>
+
       <div id="sub-footer">
         <div class="container">
           <div class="row">
@@ -252,7 +256,9 @@
           </div>
         </div>
       </div>
+      
     </footer>
+
   </div>
 </div>
 
@@ -265,7 +271,6 @@
   <script src="{{ asset('assets/public/asset/js/jquery.fancybox.pack.js')}}"></script>
   <script src="{{ asset('assets/public/asset/js/jquery.fancybox-media.js')}}"></script>
   <script src="{{ asset('assets/public/asset/js/google-code-prettify/prettify.js')}}"></script>
-  <script src="{{ asset('assets/public/aseet/js/portfolio/jquery.quicksand.js')}}"></script>
   <script src="{{ asset('assets/public/asset/js/portfolio/setting.js')}}"></script>
   <script src="{{ asset('assets/public/asset/js/jquery.flexslider.js')}}"></script>
   <script src="{{ asset('assets/public/asset/js/jquery.nivo.slider.js')}}"></script>
