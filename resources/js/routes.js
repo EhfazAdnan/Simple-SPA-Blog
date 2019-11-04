@@ -1,12 +1,18 @@
 import AdminHome from './components/admin/AdminHome'
+
 // category routes
 import CategoryList from './components/admin/category/List'
 import AddCategory from './components/admin/category/New'
 import EditCategory from './components/admin/category/Edit'
+
 // post routes
 import PostList from './components/admin/post/List'
 import AddPost from './components/admin/post/New'
 import EditPost from './components/admin/post/Edit'
+
+// frontend routes
+import PublicHome from './components/public/PublicHome'
+import BlogPost from './components/public/blog/BlogPost'
 
 export const routes = [
 
@@ -47,6 +53,18 @@ export const routes = [
    {
       path:'/edit-post/:postid',
       component: EditPost   
+   },
+
+   // frontend routes
+
+   {
+      path:'/',
+      component: PublicHome   
+   },
+
+   {
+      path:'/blog',
+      component: BlogPost   
    }
 
 ]
