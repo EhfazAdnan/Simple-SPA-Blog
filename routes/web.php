@@ -27,3 +27,7 @@ Route::group(['middleware' => ['auth']], function (){
     Route::post('/update/{id}','PostController@update_post');
     
 });
+
+
+// routes for frontend view
+Route::get('/blogpost','BlogController@get_all_blog_post');

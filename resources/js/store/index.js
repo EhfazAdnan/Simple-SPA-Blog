@@ -3,7 +3,8 @@ import axios from "axios"
 export default {
     state: {
        category: [],
-       post:[]
+       post:[],
+       blogpost:[] // frontend blog post fetch
     },
     getters: {
        getCategory(state){
@@ -11,6 +12,9 @@ export default {
        },
        getAllPost(state){
            return state.post
+       },
+       getblogPost(state){
+        return state.blogpost  // getter for frontend state
        }
     },
     actions: {
@@ -25,7 +29,13 @@ export default {
                 .then((response)=> {
                     context.commit('allpost',response.data.posts)
                 })
-       }
+       },
+       getblogPost(context){  // front end get blog post
+           axios.get('/blogpost')
+                .then((response)=> {
+                    context.commit('getblogPost',response.data.posts)
+             })
+        }
     },
     mutations: {
        categories(state,data){
@@ -33,6 +43,9 @@ export default {
        },
        allpost(state, payload){
            return state.post = payload
+       },
+       getblogPost(state, payload){
+        return state.blogpost = payload
        }
     }
 }
