@@ -13,4 +13,11 @@ class BlogController extends Controller
             'posts' => $posts
         ], 200);
     }
+
+    public function getpost_by_id($id){
+        $post = Post::with('user','category')->where('id',$id)->first();
+        return response()->json([
+            'post' => $post
+        ], 200);
+    }
 }

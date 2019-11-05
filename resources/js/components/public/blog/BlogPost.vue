@@ -37,7 +37,7 @@
                     <img :src="`uploadimage/${post.photo}`" alt="" />
                   </div>
                   <p>
-                    {{ post.description | sortlength(500,"...") }}
+                    {{ post.description | shortlength(500,"...") }}
                   </p>
                   <div class="bottom-article">
                     <ul class="meta-post">
@@ -45,7 +45,7 @@
                       <li><i class="icon-user"></i><a href="#"> {{ post.user.name }}</a></li>
                       <li v-if="post.category"><i class="icon-folder-open"></i><a href="#"> {{ post.category.cat_name }}</a></li>
                     </ul>
-                    <a href="#" class="pull-right">Continue reading <i class="icon-angle-right"></i></a>
+                    <router-link :to="`blog/${post.id}`" class="pull-right">Continue reading <i class="icon-angle-right"></i></router-link>
                   </div>
                 </div>
               </div>
