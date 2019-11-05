@@ -20,7 +20,7 @@
 
                   <li v-for="(post) in blogpost" :key="post.id">
                     <img :src="`uploadimage/${post.photo}`" class="pull-left" alt="" width="100" height="100" />
-                    <h6><a href="#">{{ post.title }}</a></h6>
+                    <h6><router-link :to="`/blog/${post.id}`">{{ post.title }}</router-link></h6>
                     <p>
                       {{ post.description | shortlength(100,"...") }}
                     </p>

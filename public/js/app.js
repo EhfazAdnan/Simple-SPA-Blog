@@ -5220,14 +5220,23 @@ __webpack_require__.r(__webpack_exports__);
     BlogSidebar: _BlogSidebar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   mounted: function mounted() {
-    this.$store.dispatch('getPostById', this.$route.params.id);
+    this.singlepost();
   },
   computed: {
     singlePost: function singlePost() {
       return this.$store.getters.singlepost;
     }
   },
-  methods: {}
+  methods: {
+    singlepost: function singlepost() {
+      this.$store.dispatch('getPostById', this.$route.params.id);
+    }
+  },
+  watch: {
+    $route: function $route(to, from) {
+      this.singlepost();
+    }
+  }
 });
 
 /***/ }),
@@ -77873,7 +77882,7 @@ var render = function() {
                               "router-link",
                               {
                                 staticClass: "pull-right",
-                                attrs: { to: "blog/" + post.id }
+                                attrs: { to: "/blog/" + post.id }
                               },
                               [
                                 _vm._v("Continue reading "),
@@ -78016,11 +78025,15 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("h6", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v(_vm._s(post.title))
-                  ])
-                ]),
+                _c(
+                  "h6",
+                  [
+                    _c("router-link", { attrs: { to: "/blog/" + post.id } }, [
+                      _vm._v(_vm._s(post.title))
+                    ])
+                  ],
+                  1
+                ),
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(

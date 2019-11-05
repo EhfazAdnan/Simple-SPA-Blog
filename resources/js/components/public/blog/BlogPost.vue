@@ -45,7 +45,7 @@
                       <li><i class="icon-user"></i><a href="#"> {{ post.user.name }}</a></li>
                       <li v-if="post.category"><i class="icon-folder-open"></i><a href="#"> {{ post.category.cat_name }}</a></li>
                     </ul>
-                    <router-link :to="`blog/${post.id}`" class="pull-right">Continue reading <i class="icon-angle-right"></i></router-link>
+                    <router-link :to="`/blog/${post.id}`" class="pull-right">Continue reading <i class="icon-angle-right"></i></router-link>
                   </div>
                 </div>
               </div>
