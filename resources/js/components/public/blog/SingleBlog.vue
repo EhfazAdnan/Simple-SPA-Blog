@@ -63,6 +63,12 @@ import BlogSidebar from "./BlogSidebar.vue"
 export default {
     name: "SingleBlog",
 
+    data(){
+      return{
+        none:''
+      }
+    },
+
     components:{
        BlogSidebar
     },

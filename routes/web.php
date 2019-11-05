@@ -34,3 +34,4 @@ Route::get('/blogpost','BlogController@get_all_blog_post');
 Route::get('/singlepost/{id}','BlogController@getpost_by_id');
 Route::get('/categories','BlogController@getAllCategories');
 Route::get('/categorypost/{id}','BlogController@get_all_post_by_cat_id');
+Route::get('/search','BlogController@search_post');
