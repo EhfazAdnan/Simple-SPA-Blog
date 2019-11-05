@@ -7,7 +7,7 @@
         <div class="row">
           <div class="span4">
             <div class="inner-heading">
-              <h2>Blog left sidebar</h2>
+              <h2>Blog left sidebar {{this.$route.params.id}} </h2>
             </div>
           </div>
           <div class="span8">
@@ -91,7 +91,20 @@ export default {
     },
 
     methods:{
+      getAllCategoryPost(){
+         if(this.$route.params.id){
+            this.$store.dispatch('getPostByCatId',this.$route.params.id);
+         }else{
+           this.$store.dispatch('getblogPost');
+         }
+         
+      }
+    },
 
+    watch:{
+      $route(to,from){
+        this.getAllCategoryPost();
+      }
     }
 
 }

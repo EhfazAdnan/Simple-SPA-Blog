@@ -11,7 +11,7 @@
               <div class="widget">
                 <h5 class="widgetheading">Categories</h5>
                 <ul class="cat">
-                  <li v-for="(category) in allcategory" :key="category.id"><i class="icon-angle-right"></i><a href="#">{{ category.cat_name }}</a><span> (20)</span></li>
+                  <li v-for="(category) in allcategory" :key="category.id"><i class="icon-angle-right"></i><router-link :to="`/categories/${category.id}`">{{ category.cat_name }}</router-link><span> (20)</span></li>
                 </ul>
               </div>
               <div class="widget">

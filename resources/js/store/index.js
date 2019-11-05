@@ -55,6 +55,12 @@ export default {
                 .then((response)=> {
                     context.commit('allcategories', response.data.categories)
                 })
+       },
+       getPostByCatId(context,payload){
+           axios.get('/categorypost/'+payload)
+                .then((res) => {
+                    context.commit('getPostByCatId',res.data.posts)
+                })
        }
     },
     mutations: {
@@ -65,13 +71,16 @@ export default {
            return state.post = payload
        },
        getblogPost(state, payload){
-        return state.blogpost = payload
+           return state.blogpost = payload
        },
        singlePost(state, payload){
            return state.singlepost = payload
        },
        allcategories(state, payload){
            return state.allcategory = payload
+       },
+       getPostByCatId(state, payload){
+           return state.blogpost = payload
        }
     }
 }
